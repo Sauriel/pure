@@ -1,0 +1,74 @@
+<div id="app">
+  <header>Header</header>
+  <aside>Menu</aside>
+  <main>
+    <template data-slot />
+  </main>
+  <footer>Footer</footer>
+</div>
+
+<style>
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+
+  header {
+    background-color: #ff0000;
+  }
+
+  aside {
+    background-color: #00ffff;
+  }
+
+  main {
+    background-color: #0000ff;
+  }
+
+  footer {
+    background-color: #ff00ff;
+  }
+
+  header,
+  aside,
+  main,
+  footer {
+    padding: 1rem;
+  }
+
+  header,
+  footer {
+    grid-column: 1 / -1;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  aside {
+    grid-row: 2 / -1;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    header,
+    aside,
+    main,
+    footer {
+      padding: 0.5rem;
+    }
+  }
+</style>
