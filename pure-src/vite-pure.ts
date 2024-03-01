@@ -100,6 +100,10 @@ function pure(options: Partial<PureOptions>): Plugin {
       // ToDo do not change index but create files for each route
       return findAndReplaceTemplates(html);
     },
+
+    buildStart() {
+      // ToDo load all files and add them to a list
+    },
   };
 }
 

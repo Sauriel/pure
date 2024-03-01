@@ -10,24 +10,31 @@
 <style>
   #app {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header"
+                         "aside main"
+                         "footer footer";
     height: 100vh;
   }
 
   header {
+    grid-area: header;
     background-color: #ff0000;
   }
 
   aside {
+    grid-area: aside;
     background-color: #00ffff;
   }
 
   main {
+    grid-area: main;
     background-color: #0000ff;
   }
 
   footer {
+    grid-area: footer;
     background-color: #ff00ff;
   }
 
